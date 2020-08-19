@@ -1,48 +1,48 @@
 //GOAL: render two cat pictures to the page
-  // get the 'cat-container' parent element
-var parentElement = document.getElementById('lab-assests');
+// get the 'cat-container' parent element
+var parentElement = document.getElementById('lab-assets');
 
 
-  // I'm gonna need a constructor function
-    // filepath
-    // alt
-    // title
+// I'm gonna need a constructor function
+// filepath
+// alt
+// title
 var imageArray = [];
-  
-function image(filepath, alt, ext){
+
+function image(name, ext){
   this.filepath = `../img/${name}.${ext}`;
   this.alt = name;
   this.title = name;
   this.clicks = 0;
 
-imageArray.push(this);
+  imageArray.push(this);
 }
-new image("bag,"jpg");
-new image("bathroom","jpg");
-new image("boots","jpg");
-new image("breakfast","jpg");
-new image("pen","jpg");
-new image("bubblegum","jpg");
-new image("chair","jpg")
-new image("cthulhu","jpg");
-new image("dog-duck","jpg");
-new image("dragon","jpg");
-new image("dog-duck","jpg");
-new image("banana","jpg");
-new image("pet-sweep","jpg")
-new image("scissors","jpg");
-new image("shark","jpg");
-new image("sweep","png")
-new image("tauntaun","jpg");
-new image("unicorn","jpg");
-new image("water-can","jpg");
-new image("wine-glass","jpg");
-new image("usb","gif");
+new image('bag','jpg');
+new image('bathroom','jpg');
+new image('boots','jpg');
+new image('breakfast','jpg');
+new image('pen','jpg');
+new image('bubblegum','jpg');
+new image('chair','jpg');
+new image('cthulhu','jpg');
+new image('dog-duck','jpg');
+new image('dragon','jpg');
+new image('dog-duck','jpg');
+new image('banana','jpg');
+new image('pet-sweep','jpg');
+new image('scissors','jpg');
+new image('shark','jpg');
+new image('sweep','png');
+new image('tauntaun','jpg');
+new image('unicorn','jpg');
+new image('water-can','jpg');
+new image('wine-glass','jpg');
+new image('usb','gif');
 
 // create a function that will get a random image
-  // get a random number between 0 and the length of the catArray
-  // assign that random number to index number in the catArray
-  // that will be that image that we show
+// get a random number between 0 and the length of the catArray
+// assign that random number to index number in the catArray
+// that will be that image that we show
 
 function getRandomImage(){
   // get a random number from the helper function betweet 0 and one less than the length of the array
@@ -69,7 +69,7 @@ function getRandomNumber(max) {
 }
 
 function handleClick(event){
- 
+
   // figure out what was clicked on
   console.log(`event.target is ${event.target.alt}`);
   var alt = event.target.alt;
@@ -81,7 +81,7 @@ function handleClick(event){
     }
   }
   // once I've found my object instance
-    // increment the clicks on that object instance
+  // increment the clicks on that object instance
   console.log('an image was clicked');
   parentElement.innerHTML = '';
   getRandomImage();
@@ -94,3 +94,4 @@ parentElement.addEventListener('click', handleClick);
 // initally generates the images on page load
 getRandomImage();
 getRandomImage();
+
