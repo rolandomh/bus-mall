@@ -1,0 +1,44 @@
+
+// SENDING DATA:
+// JSON.stringify() 
+
+// var myObj = {name: "John", age: 31, city: "New York"};
+// var myJSON = JSON.stringify(myObj);
+// window.location = "demo_json.php?x=" + myJSON;
+// <!--Receiving Data
+// If you receive data in JSON format, you can convert it into a JavaScript object
+
+// var myJSON = '{"name":"John", "age":31, "city":"New York"}';
+// var myObj = JSON.parse(myJSON);
+// document.getElementById("demo").innerHTML = myObj.name;
+
+// // Storing data:
+// myObj = {name: "John", age: 31, city: "New York"};
+// myJSON = JSON.stringify(myObj);
+// localStorage.setItem("testJSON", myJSON);
+
+// // Retrieving data:
+// text = localStorage.getItem("testJSON");
+// obj = JSON.parse(text);
+// document.getElementById("demo").innerHTML = obj.name;
+
+// // convert string to function
+// var text = '{ "name":"John", "age":"function () {return 30;}", "city":"New York"}';
+// var obj = JSON.parse(text);
+// obj.age = eval("(" + obj.age + ")");
+
+// document.getElementById("demo").innerHTML = obj.name + ", " + obj.age();
+
+
+
+// // returning an array (in full) 
+// var xmlhttp = new XMLHttpRequest();
+// xmlhttp.onreadystatechange = function() {
+//   if (this.readyState == 4 && this.status == 200) {
+//     var myArr = JSON.parse(this.responseText);
+//     document.getElementById("demo").innerHTML = myArr[0];
+//   }
+// };
+// xmlhttp.open("GET", "json_demo_array.txt", true);
+// xmlhttp.send();
+// <!-- from w3 schools -->

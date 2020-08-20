@@ -70,6 +70,8 @@ function getRandomNumber(max) {
 
 function handleClick(event){
 
+  // HERE!!!    JSON.parce();     !!!HERE
+
   // figure out what was clicked on
   console.log(`event.target is ${event.target.alt}`);
   var alt = event.target.alt;
